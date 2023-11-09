@@ -1,1 +1,24 @@
 * IEEE FPGA Workshop Part 1: SystemVerilog and Simulation
+
+Use FastX: [[https://fastx.ews.illinois.edu/]]. For help, go to
+[[https://answers.uillinois.edu/illinois.engineering/page.php?id=81727]].
+
+Open a terminal (right click on the GNOME desktop and click "Open in
+terminal"). In the terminal, do:
+
+#+begin_src sh
+  git clone https://github.com/nebhrajani-a/ieee-fpga-workshop
+    cd ieee-fpga-workshop/combinational_logic
+    module load Synopsys_x86-64/2021 # Adding this to your .bashrc is a good idea
+    make run
+#+end_src
+
+This should run a simulation and fail at task 0. Open up the file
+=hdl/combinational_logic.sv= and start doing the tasks! The testbench
+is in =hvl/top_tb.sv=.
+
+To view the waveform, in the shell, do:
+
+#+begin_src sh
+  ./run_verdi.sh &
+#+end_src
