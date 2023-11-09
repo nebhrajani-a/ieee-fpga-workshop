@@ -15,7 +15,7 @@ sim/top_tb: $(SRCS)
 	bash check_compile_error.sh
 
 .PHONY: run_top_tb
-run_top_tb: sim/top_tb $(PROG)
+run: sim/top_tb
 	rm -f sim/dump.fsdb
 	cd sim && ./top_tb -l simulation.log
 
