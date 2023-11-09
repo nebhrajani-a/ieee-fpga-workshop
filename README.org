@@ -22,3 +22,6 @@ To view the waveform, in the shell, do:
 #+begin_src sh
   ./run_verdi.sh &
 #+end_src
+
+If you'd like to keep track of changes, fork this repository and use
+that copy to track changes.
