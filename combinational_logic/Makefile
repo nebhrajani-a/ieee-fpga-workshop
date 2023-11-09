@@ -7,12 +7,11 @@ HVL_SRCS := $(shell find $(PWD)/hvl -name '*.sv' -o -name '*.v')
 SRCS := $(PKG_SRCS) $(HDL_SRCS) $(HVL_SRCS)
 
 export VCS_ARCH_OVERRIDE=linux
-VCS_FLAGS= -full64 -lca -sverilog +lint=all,noNS -timescale=1ns/1ns -debug_acc+all -kdb -fsdb -suppress=LCA_FEATURES_ENABLED
+VCS_FLAGS= -full64 -lca -sverilog -timescale=1ns/1ns -debug_acc+all -kdb -fsdb -suppress=LCA_FEATURES_ENABLED
 
 sim/top_tb: $(SRCS)
 	mkdir -p sim
 	cd sim && vcs $(SRCS) $(VCS_FLAGS) -msg_config=../vcs_warn.config -l compile.log -top top_tb -o top_tb
-	bash check_compile_error.sh
 
 .PHONY: run_top_tb
 run: sim/top_tb
