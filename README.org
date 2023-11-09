@@ -8,9 +8,9 @@ terminal"). In the terminal, do:
 
 #+begin_src sh
   git clone https://github.com/nebhrajani-a/ieee-fpga-workshop
-    cd ieee-fpga-workshop/combinational_logic
-    module load Synopsys_x86-64/2021 # Adding this to your .bashrc is a good idea
-    make run
+  cd ieee-fpga-workshop/combinational_logic
+  module load Synopsys_x86-64/2021 # Adding this to your .bashrc is a good idea
+  make run
 #+end_src
 
 This should run a simulation and fail at task 0. Open up the file
